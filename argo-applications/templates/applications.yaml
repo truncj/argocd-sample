@@ -19,6 +19,7 @@ spec:
     targetRevision: {{ .targetRevision }}
   syncPolicy:
 {{ .syncPolicy | indent 5}}
+---
 {{- end }}
 
 

@@ -9,11 +9,13 @@ spec:
     server: {{ .destination.server }}
   project: {{ .project }}
   source:
+  {{- if .valuesFiles }}
     helm:
       valueFiles:
       {{- range .valuesFiles }}
       - {{ . }}
       {{- end }}
+  {{- end }}
     path: {{ .path }}
     repoURL: {{ .repoURL }}
     targetRevision: {{ .targetRevision }}

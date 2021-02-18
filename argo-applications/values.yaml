@@ -32,5 +32,16 @@ applications:
       automated:
         prune: true
         selfHeal: true
-
+  - name: console
+    destination:
+      namespace: gitops
+      server: https://kubernetes.default.svc
+    project: default
+    path: argocd/console
+    repoURL: https://github.com/openshift/openshift-gitops-examples.git
+    targetRevision: HEAD
+    syncPolicy: |-
+      automated:
+        prune: true
+        selfHeal: true
 

@@ -1,0 +1,4 @@
+ingress:
+  hosts:
+    - host: juice-shop.apps.milwaukee.northeast.aws.redhat-demo.com
+      paths: ["/"]

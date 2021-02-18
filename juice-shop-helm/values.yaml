@@ -46,7 +46,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: juice-shop.apps.milwaukee.northeast.aws.redhat-demo.com
+    - host: dev-juice-shop.apps.milwaukee.northeast.aws.redhat-demo.com
       paths: ["/"]
   tls: []
   #  - secretName: chart-example-tls

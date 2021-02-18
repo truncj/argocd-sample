@@ -17,5 +17,20 @@ applications:
       automated:
         prune: true
         selfHeal: true
+  - name: juice-shop-helm-prod
+    destination:
+      namespace: gitops
+      server: https://kubernetes.default.svc
+    project: default
+    valuesFiles:
+      - values.yaml
+      - prod-values.yaml
+    path: juice-shop-helm
+    repoURL: https://github.com/truncj/argocd-sample.git
+    targetRevision: HEAD
+    syncPolicy: |-
+      automated:
+        prune: true
+        selfHeal: true
 
 

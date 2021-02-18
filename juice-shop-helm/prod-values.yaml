@@ -1,3 +1,6 @@
+image:
+  tag: "v1.0"
+
 ingress:
   hosts:
     - host: juice-shop.apps.milwaukee.northeast.aws.redhat-demo.com

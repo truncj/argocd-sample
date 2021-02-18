@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: bkimminich/juice-shop
+  repository: notronswanson/juice-shop
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart version.
-  tag: "v12.6.1"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""

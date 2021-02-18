@@ -1,0 +1,20 @@
+apiVersion: v1
+items:
+- apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  spec:
+    destination:
+      namespace: gitops
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      helm:
+        valueFiles:
+        - values.yaml
+      path: .
+      repoURL: https://github.com/truncj/juice-shop-helm.git
+      targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true

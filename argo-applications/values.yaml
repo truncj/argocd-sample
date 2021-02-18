@@ -1,0 +1,21 @@
+# Default values for argo-applications.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+applications:
+  - name: juice-shop-helm
+    destination:
+      namespace: gitops
+      server: https://kubernetes.default.svc
+    project: default
+    valuesFiles:
+      - values.yaml
+    path: juice-shop-helm
+    repoURL: https://github.com/truncj/argocd-sample.git
+    targetRevision: HEAD
+    syncPolicy: |-
+      automated:
+        prune: true
+        selfHeal: true
+
+

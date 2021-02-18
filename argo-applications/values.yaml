@@ -40,5 +40,5 @@ applications:
     path: argocd/console
     repoURL: https://github.com/openshift/openshift-gitops-examples.git
     targetRevision: HEAD
-    syncPolicy: {}
+    syncPolicy: ""
 

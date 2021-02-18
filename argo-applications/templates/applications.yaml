@@ -19,8 +19,10 @@ spec:
     path: {{ .path }}
     repoURL: {{ .repoURL }}
     targetRevision: {{ .targetRevision }}
+{{- if .syncPolicy }}
   syncPolicy:
 {{ .syncPolicy | indent 5}}
+{{- end }}
 ---
 {{- end }}
 
